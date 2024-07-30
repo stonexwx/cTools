@@ -1,9 +1,6 @@
 # 检测 Google Test
 find_package(GTest REQUIRED)
 
-# 设置可执行文件的输出路径
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
-
 # 头文件路径
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/string_tools)
