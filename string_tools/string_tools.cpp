@@ -68,6 +68,62 @@ namespace stringTools
         return str;
     }
 
+    char *toupper(char *str)
+    {
+        if (str == nullptr)
+            return nullptr; // 如果传进来的是空地址，直接返回，防止程序崩溃。
+
+        char *p = str; // 指向字符串的首地址。
+
+        while (*p)
+        {
+            if (*p >= 'a' && *p <= 'z')
+                *p -= 32; // 小写字母转大写字母。
+
+            p++;
+        }
+        return str;
+    }
+
+    string &toupper(string &str)
+    {
+        for (auto &cc : str)
+        {
+            if ((cc >= 'a') && (cc <= 'z'))
+                cc = cc - 32;
+        }
+
+        return str;
+    }
+
+    string &tolower(string &str)
+    {
+        for (auto &cc : str)
+        {
+            if ((cc >= 'A') && (cc <= 'Z'))
+                cc = cc + 32;
+        }
+
+        return str;
+    }
+
+    char *tolower(char *str)
+    {
+        if (str == nullptr)
+            return nullptr; // 如果传进来的是空地址，直接返回，防止程序崩溃。
+
+        char *p = str; // 指向字符串的首地址。
+
+        while (*p)
+        {
+            if (*p >= 'A' && *p <= 'Z')
+                *p += 32; // 大写字母转小写字母。
+
+            p++;
+        }
+        return str;
+    }
+
 } // namespace stringTools
 
 #endif // _USING_STRING_TOOLS

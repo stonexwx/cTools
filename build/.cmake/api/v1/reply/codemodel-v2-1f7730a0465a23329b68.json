@@ -33,7 +33,8 @@
 					"source" : "demo/string_demo",
 					"targetIndexes" : 
 					[
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -50,7 +51,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -68,6 +70,13 @@
 					"id" : "test1_deletelchr::@0a0f63bff7d2a5674281",
 					"jsonFile" : "target-test1_deletelchr-Debug-708fe26026d336e0957e.json",
 					"name" : "test1_deletelchr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test2_toupper::@0a0f63bff7d2a5674281",
+					"jsonFile" : "target-test2_toupper-Debug-736d5ffaeec784a4ddcc.json",
+					"name" : "test2_toupper",
 					"projectIndex" : 0
 				}
 			]
