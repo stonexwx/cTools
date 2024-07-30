@@ -1,17 +1,16 @@
-#include <iostream>
 #include "_public.h"
+#include "gtest/gtest.h"
 
-int main()
+TEST(StringToolsTest, BasicAssertions1)
 {
-    string str = "  hello world!  ";
-    cout << "Before: " << str << endl;
-    stringTools::deletelchr(str);
-    cout << "After: " << str << endl;
+    string str = "   hello";
+    // EXPECT_EQ() 用于验证两个表达式的相等性。
+    EXPECT_EQ(stringTools::deletelchr(str), "hello");
+}
 
-    char str1[] = "!!!!!hello world!  ";
-    cout << "Before: " << str1 << endl;
-    stringTools::deletelchr(str1, '!');
-    cout << "After: " << str1 << endl;
-
-    return 0;
+TEST(StringToolsTest, BasicAssertions2)
+{
+    char str[] = "!!!!hello";
+    // EXPECT_EQ() 用于验证两个表达式的相等性。
+    EXPECT_STREQ(stringTools::deletelchr(str, '!'), "hello");
 }

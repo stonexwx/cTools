@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.10) # 设置CMake的最低版本要求
 
 project(MyLibrary) # 项目名称
 
+# 启用测试
+enable_testing()
+
 # 设置C++标准
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
