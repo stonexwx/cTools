@@ -6,6 +6,10 @@
 			[
 				{
 					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
@@ -17,6 +21,20 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "demo/string_demo",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "demo/string_demo",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -25,12 +43,14 @@
 				{
 					"directoryIndexes" : 
 					[
-						0
+						0,
+						1
 					],
 					"name" : "MyLibrary",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +59,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MyLibrary::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MyLibrary-Debug-d342463dd11a989c3086.json",
+					"jsonFile" : "target-MyLibrary-Debug-4587ff797967033eb69c.json",
 					"name" : "MyLibrary",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test1_deletelchr::@0a0f63bff7d2a5674281",
+					"jsonFile" : "target-test1_deletelchr-Debug-23fc2ea1d7b7c29d9c6f.json",
+					"name" : "test1_deletelchr",
 					"projectIndex" : 0
 				}
 			]
