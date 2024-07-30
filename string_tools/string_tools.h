@@ -49,6 +49,24 @@ namespace stringTools
      *  @return 返回处理后的字符串。
      */
     string &deleterchr(string &str, const int cc = ' ');
+    /**
+     *  @brief 删除字符串左右边指定的字符。（c风格）
+     *   例如：str = "  hello world!  ";
+     *   删除左右的空格：str = "hello world!";
+     *  @param str 待处理的字符串。
+     *  @param cc 待删除的字符。
+     *  @return 返回处理后的字符串。
+     */
+    char *deletelrchr(char *str, const int cc = ' ');
+    /**
+     *  @brief 删除字符串左右边指定的字符。（c++风格）
+     *   例如：str = "  hello world!  ";
+     *   删除左右的空格：str = "hello world!";
+     *  @param str 待处理的字符串。
+     *  @param cc 待删除的字符。
+     *  @return 返回处理后的字符串。
+     */
+    string &deletelrchr(string &str, const int cc = ' ');
 } // namespace stringTools
 
 #endif // _USING_STRING_TOOLS

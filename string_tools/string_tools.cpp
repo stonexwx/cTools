@@ -51,6 +51,23 @@ namespace stringTools
 
         return str;
     }
+
+    string &deletelrchr(string &str, const int cc)
+    {
+        deletelchr(str, cc); // 删除左边的cc字符。
+        deleterchr(str, cc); // 删除右边的cc字符。
+
+        return str;
+    }
+
+    char *deletelrchr(char *str, const int cc)
+    {
+        deletelchr(str, cc); // 删除左边的cc字符。
+        deleterchr(str, cc); // 删除右边的cc字符。
+
+        return str;
+    }
+
 } // namespace stringTools
 
 #endif // _USING_STRING_TOOLS
