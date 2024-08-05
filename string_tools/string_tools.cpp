@@ -124,6 +124,40 @@ namespace stringTools
         return str;
     }
 
+    bool replacestr(string &str, const string &str1, const string &str2, const bool bloop)
+    {
+        if (str.empty() || str1.empty())
+            return false;
+        if ((bloop == true) && (str2.find(str1) != string::npos))
+            return false;
+
+        int pos = 0;
+        while ((pos = str.find(str1, pos)) != string::npos)
+        {
+            str.replace(pos, str1.size(), str2);
+            if (bloop == false)
+                pos += str2.size();
+        }
+        return true;
+    }
+
+    bool replacestr(char *str, const string &str1, const string &str2, const bool bloop)
+    {
+        if (str == nullptr)
+            return false;
+
+        string strtemp(str);
+
+        bool ret = replacestr(strtemp, str1, str2, bloop);
+        if (ret == false)
+            return false;
+
+        strtemp.copy(str, strtemp.length());
+        str[strtemp.length()] = 0; // string的copy函数不会给C风格字符串的结尾加0。
+
+        return true;
+    }
+
 } // namespace stringTools
 
 #endif // _USING_STRING_TOOLS
